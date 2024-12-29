@@ -5,8 +5,21 @@ import { HiArrowDown } from "react-icons/hi";
 import tonicon from "@/app/_assets/ton-logo.svg";
 import pawsicon from "@/app/_assets/logo-new.svg";
 import Image from "next/image";
+import {
+  TonConnectButton,
+  useTonAddress,
+  useTonWallet,
+} from "@tonconnect/ui-react";
 const WalletTab = () => {
   const [walletBal, setWalletBal] = React.useState(0);
+  const [address, setAddress] = React.useState<string | null>(null);
+  const wallet = useTonWallet();
+  const addresss = useTonAddress(true);
+  React.useEffect(() => {
+    if (addresss) {
+      setAddress(addresss);
+    }
+  }, [addresss]);
 
   const data = [
     { id: 1, name: "TON", balance: 65, icon: tonicon },
@@ -16,6 +29,10 @@ const WalletTab = () => {
     <div className="flex flex-col items-center justify-center mt-10">
       <h1 className="text-3xl font-semibold text-white">$ 65</h1>
       <p className="text-base font-medium text-[#7c7c7c]">Total Balance</p>
+
+      <div className="flex justify-center items-center mt-9">
+        <TonConnectButton />
+      </div>
       <div className="flex flex-row items-center justify-around w-full mt-8">
         <button className="flex flex-col items-center gap-2">
           <HiArrowUp className="w-12 h-12 bg-[#171717] rounded-full p-2" />
@@ -55,8 +72,12 @@ const WalletTab = () => {
                 </div>
               </div>
               <div className="flex flex-col items-end">
-                <div className="text-lg font-medium text-white">{item.balance}</div>
-                <div className="text-sm font-medium text-[#7c7c7c]">CONICON</div>
+                <div className="text-lg font-medium text-white">
+                  {item.balance}
+                </div>
+                <div className="text-sm font-medium text-[#7c7c7c]">
+                  CONICON
+                </div>
               </div>
             </div>
           </div>

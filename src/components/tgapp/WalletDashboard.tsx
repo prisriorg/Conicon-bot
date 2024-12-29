@@ -10,14 +10,14 @@ const WalletDashboard = ({coins}:{coins:number}) => {
 
     const wallet = new Intl.NumberFormat('en-US').format(coins);
   return (
-    <div className="flex flex-col items-center justify-center gap-2">
+    <div className="flex flex-col items-center justify-center gap-2 mt-8">
       <img
         src={data?.photoUrl}
         className="w-1/6 rounded-full"
         alt={data?.firstName}
       />
       <h1 className="text-2xl">{name}</h1>
-      <div className="flex justify-center items-center mt-4 gap-2">
+      <div className="flex justify-center items-center my-6 gap-2">
         <Image src={coin} alt="wallet" className="w-[12%] border p-2 rounded-xl " />
         <h1 className="text-3xl font-semibold">{wallet}</h1>
       </div>
