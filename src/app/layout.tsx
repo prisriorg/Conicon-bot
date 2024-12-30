@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-sync-scripts */
+
 import type { PropsWithChildren } from "react";
 import type { Metadata } from "next";
 
@@ -14,7 +16,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className="bg-black text-white">
-        <Script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></Script>
+        <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
