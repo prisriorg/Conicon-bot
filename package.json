@@ -17,6 +17,7 @@
     "@telegram-apps/telegram-ui": "^2.1.5",
     "@tonconnect/ui-react": "^2.0.5",
     "eruda": "^3.0.1",
+    "image-thumbnail": "^1.0.17",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.7",
+    "@types/image-thumbnail": "^1.0.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

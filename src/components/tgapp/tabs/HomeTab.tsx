@@ -1,14 +1,12 @@
 import React from "react";
 import WalletDashboard from "../WalletDashboard";
 import ClaimButton from "../ClaimButton";
-import Link from "next/link";
 
 const HomeTab = () => {
   return (
     <>
       <WalletDashboard coins={23456789} />
       <ClaimButton claim={false} user={0} />
-      {/* <TasksTab /> */}
 
       <div
         className={`p-4 flex items-center justify-between border-b-[1px] border-[#222622] bg-[#2d2b1b] rounded-t-2xl`}
