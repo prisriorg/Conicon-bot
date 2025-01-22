@@ -7,5 +7,5 @@ export const runtime = "edge";
 export async function GET(request: NextRequest) {
   const name = await db.select().from(fooTable).all();
 
-  return NextResponse.json(name);
+  return NextResponse.json({name});
 }
