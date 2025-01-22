@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/db";
-import { fooTable } from "@/db/schema";
+
 
 export const runtime = "edge";
 
