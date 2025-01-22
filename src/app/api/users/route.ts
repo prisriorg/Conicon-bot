@@ -1,14 +1,9 @@
-import { type NextRequest, NextResponse } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 
 export const runtime = "edge";
 
-export async function GET(req: NextRequest) {
-  
-  try {
-    //const ddd = await db.select().from(fooTable).all();
+export async function POST(request: NextRequest) {
+  const { name } = await request.json();
 
-    return NextResponse.json({ "ddd":"" });
-  } catch (e) {
-    return NextResponse.json({ e });
-  }
+  return NextResponse.json(name);
 }
