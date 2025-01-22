@@ -2,3 +2,8 @@ name = "conicon"
 compatibility_date = "2024-07-29"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
+
+
+[vars]
+TURSO_DATABASE_URL = "libsql://ppr-prisri.turso.io"
+TURSO_AUTH_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3Mzc1NjY4MTYsImlkIjoiYjFjYTIwNzAtNjc4Zi00N2M5LTliYTItNzczZDRjODZmZDM5In0.gXO16K682RrCofhkaVHrfbgoWVIen42h-4HsIuy-GItYdrBUwFgtXa91PmDSDsjAkCKZN4ge_xAvkxH08worAQ"

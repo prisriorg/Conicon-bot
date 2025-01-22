@@ -16,18 +16,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className="bg-black text-white">
-        <script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-        window.TelegramAdsController = new TelegramAdsController();
-        window.TelegramAdsController.initialize({
-          pubId: "939725",
-          appId: "1132",
-        });
-        `,
-          }}
-        ></script>
+        
         <Root>{children}</Root>
       </body>
     </html>

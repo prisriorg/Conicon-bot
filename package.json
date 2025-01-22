@@ -9,13 +9,21 @@
     "start": "next start",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
-    "deploy": "npm run pages:build && wrangler pages publish --branch=production"
+    "deploy": "npm run pages:build && wrangler pages publish --branch=production",
+
+
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@libsql/client": "^0.14.0",
     "@telegram-apps/init-data-node": "^1.2.1",
     "@telegram-apps/sdk-react": "^2.0.22",
     "@telegram-apps/telegram-ui": "^2.1.5",
     "@tonconnect/ui-react": "^2.0.5",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.4",
     "eruda": "^3.0.1",
     "image-thumbnail": "^1.0.17",
     "next": "14.2.4",
@@ -29,6 +37,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.30.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
